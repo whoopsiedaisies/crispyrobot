@@ -1,0 +1,33 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Roboto&display=swap');
+
+/* root */
+:root {
+  --background: #ffffff;
+  --text-color: #000000;
+  --sun: #FFB718;
+  --hotpink: #FD4F00;
+  --babypink: #F27FB2;
+  --deepblue: #1D24AB;
+  --grassgreen: #1D24AB;
+}
+
+body {
+  background-color: var(--background);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: 'Red Hat Display';
+}
+
+p {
+  font-size: 16px;
+  font-family: 'Roboto';
+}
