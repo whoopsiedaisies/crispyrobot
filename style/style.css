@@ -1,15 +1,29 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Roboto&display=swap');
 
+
+@font-face {
+  font-family: ITC Avant Garde Gothic;
+  font-weight: 400;
+  src: url(itc-avant-garde-gothic-book-regular.otf);
+}
+
+@font-face {
+  font-family: ITC Avant Garde Gothic;
+  font-weight: 600;
+  src: url(itc-avant-garde-gothic-bold.otf);
+}
+
+
 /* root */
 :root {
   --background: #ffffff;
   --text-color: #000000;
-  --sun: #FFB718;
+  --sun: #EA9722;
   --hotpink: #FD4F00;
   --babypink: #F27FB2;
   --deepblue: #1D24AB;
-  --grassgreen: #1D24AB;
+  --grassgreen: #4C9D2A;
 }
 
 body {
@@ -31,11 +45,32 @@ header {
 }
 
 h1 {
-  font-size: 24px;
-  font-family: 'Red Hat Display';
+  font-size: 40px;
+  font-family: ITC Avant Garde Gothic;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+h1.coming-soon {
+  text-align: center;
+  color: var(--deepblue);
 }
 
 p {
   font-size: 16px;
   font-family: 'Roboto';
+}
+
+nav a {
+  font-size: 24px;
+  font-family: ITC Avant Garde Gothic;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0 24px 0 0;
+  color: var(--deepblue);
+  transition: color 0.3s;
+}
+
+nav a:hover, a.selected {
+  color: var(--hotpink);
 }
