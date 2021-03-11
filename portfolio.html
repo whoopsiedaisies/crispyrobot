@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+
+  <body>
+
+    <header>
+      <!-- logo placeholder -->
+      <nav>
+        <img id="logo-placeholder" src="img/logo-placeholder.png">
+      </nav>
+
+      <nav>
+        <a href="portfolio.html" class="selected">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </header>
+
+
+<!--begin body container-->
+
+    <div class="body-container">
+
+          <section>
+            <h1>Portfolio</h1>
+            <p>Explore my portfolio and filter by tags!</p>
+          </section>
+
+          <section class="legend">
+            <span class="dataviz"></span> Data Visualization
+            <span class="branding"></span> Branding
+            <span class="ui"></span> UI design
+          </section>
+
+
+<!--begin portfolio container-->
+
+      <div class="portfolio-container">
+
+
+        <!--begin portfolio items-->
+
+
+        <div class="portfolio-item" style="background-image: url('img/the-top.png')">
+            <a href="portfolio/the-top.html">
+                  <h2 class="portfolio-item">The Top</h2>
+            </a>
+        </div>
+
+        <div class="portfolio-item" style="background-image: url('img/heat-map.png')">
+            <a href="portfolio/heat-map.html">
+                  <h2 class="portfolio-item">Heat Map</h2>
+            </a>
+        </div>
+
+        <div class="portfolio-item" style="background-image: url('img/dtw.png')">
+            <a href="portfolio/discover-the-world.html">
+                  <h2 class="portfolio-item">Discover the World</h2>
+            </a>
+        </div>
+
+        <!--end portfolio items-->
+
+      </div>
+      <!--end portfolio container-->
+
+
+    </div>
+    <!--end body container-->
+
+
+  </body>
+
+  <footer>
+    <div id="copyright">
+      &copy;
+      <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+      Copyright Kathrin Uhsemann — All rights reserved.
+    </div>
+  </footer>
+
+</html>

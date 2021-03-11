@@ -1,0 +1,261 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Roboto&display=swap');
+
+/*ITC Avant Garde Gothic Pro 300 500 700*/
+@import url("https://use.typekit.net/axy4cjp.css");
+
+/*Apercu Pro*/
+@import url(//db.onlinewebfonts.com/c/b8788b26cb5f2d9f5c9edf71e7846f5c?family=Apercu+Pro+Medium);
+@import url(//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro);
+
+/*slide in from right animation*/
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(3%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* root colors*/
+:root {
+  --background-primary-color: #e1b4d4; /*light purple*/
+  --background-secondary-color: #d6e3b7; /*light green*/
+  --background-tertiary-color: #ede8e2; /*linen*/
+
+  --headline-primary-color: #3f174c; /*purple*/
+  --headline-secondary-color: #005c5b; /*green*/
+
+  --text-color: #3f174c; /*purple*/
+
+  --shadow-color: #9871AC; /*medium pink*/
+
+  --nav-bar-color: #005c5b; /*green*/
+
+
+/*HL*/
+  --red: #FD4F00;
+  --blue: #1D24AB;
+  --text: #0E0912;
+  --sand: ##E2C4AC;
+  --greyish: #C6D0DA;
+  --brownish: #231F20;
+  --sun: #FD7E2D;
+  --pastelblue: #31446F;
+  --sunred: #E14A21;
+  --babypink: #F27FB2;
+  --lemon: #EA9722;
+  --grassgreen: #4C9D2A;
+
+/*labels*/
+  --dataviz: #9871AC;
+  --ui: #3f174c;
+  --branding: #005c5b;
+
+}
+
+
+
+body {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  background-color: var(--background-primary-color);
+  color: var(--text-color);
+	margin: auto; /*auto margins keep it centered */
+	/* max-width: 1120px; */
+  max-width: 100%;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  padding: 24px 24px 0px 24px;
+  background: var(--headline-secondary-color);
+}
+/*nav bar*/
+
+nav a {
+  font-family: 'Apercu Pro Medium', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--background-primary-color);
+  margin: 0px 5px 0px 10px;
+  padding: 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a.selected {
+  background: var(--background-primary-color);
+  color: var(--headline-primary-color);
+}
+
+/*body container*/
+.body-container {
+  padding: 2% 13%;
+}
+
+
+/*portfolio*/
+.portfolio-container {
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows: repeat(3, 280px); /*rows*/
+  margin-top:20px;
+}
+
+div.portfolio-item {
+  background: var(--background-tertiary-color);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: -17px -17px 0px 0px var(--shadow-color);
+}
+
+div.portfolio-item:hover {
+  box-shadow: -15px -15px 0px 0px var(--shadow-color);
+  transition: 0.3s;
+}
+
+h2.portfolio-item {
+  font-weight: 200;
+  font-family: itc-avant-garde-gothic-pro;
+  text-align: center;
+  padding: 8px 16px 8px 18px;
+  text-transform: none;
+  color: var(--background-tertiary-color);
+  background: var(--shadow-color);;
+  display:table;
+  margin-left: -15px;
+}
+
+
+/*text styles*/
+
+h1, h2, h3 {
+  font-family: 'Apercu Pro Medium', sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 2.5px;
+  color: var(--headline-primary-color);
+  /*animation: 1s ease-out 0s 1 slideInFromRight;*/
+}
+
+h1.coming-soon {
+  margin: 300px 0 0 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  color: var(--headline-secondary-color);
+}
+
+p {
+  font-family: 'Apercu Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*image styles*/
+#logo-placeholder {
+  max-width: 2em;
+  max-height: inherit;
+}
+
+/*legend*/
+section.legend {
+  font-size: 14px;
+  font-style: italic;
+  text-align: right;
+  padding: 16px;
+}
+
+section.legend span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  margin: 0 4px 0 16px;
+  vertical-align: baseline;
+}
+
+section span.dataviz {
+  background-color: var(--dataviz);
+}
+
+section span.branding {
+  background-color: var(--branding);
+}
+
+section span.ui {
+  background-color: var(--ui);
+}
+
+
+/*footer*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: ITC Avant Garde Gothic;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-color);
+
+  margin: 24px 0 0 0;
+  padding: 8px 0 8px 0;
+  border-top: 1px solid var(--text-color);
+
+}
+
+
+/* media queries */
+@media screen and (max-width:800px) {
+
+
+
+@media screen and (max-width:600px) {
+
+
+
+  section.legend {
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 920px) {
+  header {
+    flex-direction: column;
+  }

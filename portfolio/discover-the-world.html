@@ -1,0 +1,48 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Discover the World</title>
+    <link rel="stylesheet" href="../styles/dtw.css">
+  </head>
+
+  <body>
+
+
+<header>
+	<h1>
+  <img src="../img/dtw-logo.svg" alt="Discover the world">
+  </h1>
+
+  <form>
+    <select name="valueX">
+      <option value="singlePerson" selected>Single person cost</option>
+      <option value="family">Family of 4 cost</option>
+      <option value="apartment">1 bed city-center apartment</option>
+      <option value="utilities">Cost of monthly utilities</option>
+      <option value="monthlyPass">Monthly cost of transport</option>
+      <option value="expensiveMeal">Expensive meal for 2</option>
+  	</select>
+
+    <span>vs</span>
+
+    <select name="valueY">
+      <option value="singlePerson">Single person cost</option>
+      <option value="family">Family of 4 cost</option>
+      <option value="apartment" selected>1 bed city-center apartment</option>
+      <option value="utilities">Cost of monthly utilities</option>
+      <option value="monthlyPass">Monthly cost of transport</option>
+      <option value="expensiveMeal">Expensive meal for 2</option>
+  	</select>
+
+  </form>
+</header>
+
+<svg></svg>
+
+<script src="../scripts/d3.min.js"></script>
+<script src="../scripts/dtw-data.js"></script>
+<script src="../scripts/dtw-cities.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap');
+
+
+
+:root {
+  --background: #fff9f9;
+  --primary-color: #ff0000;
+}
+
+body {
+	font-family: Work Sans;
+	font-size: 16px;
+	line-height: 1.5;
+
+	background-color: var(--background);
+	color: var(--primary-color);
+	margin: 64px auto 64px auto;
+	max-width: 960px;
+  text-align:  center;
+}
+
+h1 {
+	margin:  0 0 48px 0;
+}
+
+span {
+  margin: 0 8px 0 8px;
+}
+
+circle {
+  fill: var(--primary-color);
+  stroke: var(--background);
+  stroke-width: 3px;
+}
+
+line {
+  stroke-width: 1px;
+  stroke-dasharray: 2 8;
+}
+
+path.domain {
+  stroke-width: 3px;
+}
+
+text.x-axis, text.y-axis {
+  fill: var(--primary-color);
+  font-size: 24px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+g.city rect {
+  fill: var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+g.city text {
+  fill: var(--background);
+  text-anchor: middle;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.25s;
+
+}
+
+g.city:hover rect, g.city:hover text {
+  opacity: 1;
+}
+
+
+@media (max-width: 1000px) {
+  body {
+    margin: 20px;
+  }
+}
