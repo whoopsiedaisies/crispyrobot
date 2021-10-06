@@ -4,51 +4,80 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Home</title>
+    <title>K-create Home</title>
     <link rel="stylesheet" href="styles/style.css">
   </head>
 
+
   <body>
 
-    <header>
-      <!-- logo placeholder -->
-      <nav>
-        <a href="home.html" class="selected">
-        <img id="logo-placeholder" src="img/logo-placeholder.png"></a>
-      </nav>
 
-      <nav>
-        <a href="portfolio.html">Portfolio</a>
+    <header>
+
+      <nav id="nav-main">
+        <a href="portfolio.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a class="selected" href="home.html"><img class="logo-placeholder" src="img/logo-white.png"></a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
 
+      <nav id="nav-mobile">
+        <div id="navMobile" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="home.html"><img class="logo-placeholder" src="img/logo-white.png"></a>
+            <a href="portfolio.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <span class="burger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+        <script>
+        function openNav() {
+          document.getElementById("navMobile").style.height = "100%";}
+        function closeNav() {
+          document.getElementById("navMobile").style.height = "0%";}
+        </script>
+      </nav>
+
     </header>
 
-    <div class="body-container">
-
-      <section class="intro">
-        <h1>Tell your story with data</h1>
-        <p>I design visualizations to make your data understandable and beautiful.</p>
-        <h2>Design meets data</h2>
-        <p>Hi there, I am Kathrin, a data visualization & graphic designer in Rotterdam. I ride the line between design and technology. This is my portfolio. Find me on Linkedin or via email.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2>Tell your story with data</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </section>
 
 
-    </div>
 
-  </body>
+
+  <section class="intro">
+    <h1>Digital creative <br>specializing in <br>branding & illustration</h1>
+  </section>
+
+  <section class="intro">
+    <h2>Let's work together!</h2>
+  </section>
+
+  <div class="social-icons">
+        <img class="social" src="img/icon-linkedin.png">
+        <img class="social" src="img/icon-dribbble.png">
+        <img class="social" src="img/icon-instagram.png">
+  </div>
+
 
   <footer>
     <div id="copyright">
       &copy;
-      <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-      Copyright Kathrin Uhsemann — All rights reserved.
+
+      <script>document.getElementById('copyright').appendChild(document.createTextNode(new
+      Date().getFullYear()))</script>
+
+      Copyright Kathrin Uhsemann — All rights
+      reserved.
     </div>
   </footer>
+
+
+</body>
 
 </html>
