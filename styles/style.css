@@ -195,9 +195,9 @@ h1 {
 }
 
 div.coming-soon {
-  top: 50%;
-  left: 50%;
+
   text-align: center;
+  align-items: center;
   display: grid;
   height: 100vh;
 }
