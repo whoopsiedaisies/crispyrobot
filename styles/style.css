@@ -1,49 +1,57 @@
-/* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Roboto&display=swap');
-
-/*Adobe fonts*/
+/* ---------------- fonts ---------------- */
 @import url("https://use.typekit.net/ybh0ixv.css");
-/* catalpa 100 300 700*/
-/* barricada-pro 400 */
-/* fino-sans 400 */
-/* itc-avant-garde-gothic-pro 300 500 700*/
 
-/*Apercu Pro*/
-@import url(//db.onlinewebfonts.com/c/b8788b26cb5f2d9f5c9edf71e7846f5c?family=Apercu+Pro+Medium);
-@import url(//db.onlinewebfonts.com/c/74c3c29282b604a9eed88ac6ede61463?family=Apercu+Pro);
+@font-face {
+  font-family: Avenir;
+  src: url(Avenir.ttc);
+}
+
+@font-face {
+  font-family: Avenir Heavy;
+  src: url(Avenir.ttc);
+}
+
+@font-face {
+  font-family: Lulo;
+  src: url(Lulo.ttf);
+}
+
+@font-face {
+    font-family: 'Campton-Bold-DEMO';
+    src:url('Campton-Bold-DEMO.ttf.woff') format('woff'),
+        url('Campton-Bold-DEMO.ttf.svg#Campton-Bold-DEMO') format('svg'),
+        url('Campton-Bold-DEMO.ttf.eot'),
+        url('Campton-Bold-DEMO.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 
 /* ---------------- root colors ---------------- */
+
 :root {
 
-#FF8EC8; /*pink*/
-#7709FA; /*purple*/
-#84CAFD; /*light blue*/
-#010FFA; /*dark blue*/
-#FF502B; /*red*/
-#FFD43D; /*yellow*/
-#01BD65; /*green*/
-#030303; /*black*/
-#FFFFFF; /*white*/
+/* #f8f5e4 = beige */
+/* #fdebeb = light pink*/
+/* #3a5aed = blue */
+/* #f29cc9 = pink */
+/* #fdda36 = yellow */
+/* #f85a59 = red */
+/* #1b1c1b = black */
 
-  --background-primary-color: #030303;
-  --background-secondary-color: #FFFFFF;
+  --background-primary-color: #f8f5e4;
+  --background-secondary-color: #fdebeb;
 
-  --accent-color: #7709FA;
+  --headline-primary-color: #3a5aed;
+  --headline-secondary-color: #f29cc9;
 
-  --headline-primary-color: #FFFFFF;
-  --headline-secondary-color: #7709FA;
+  --text-color: #1b1c1b;
 
-  --text-color: #FFFFFF;
+  --accent-color: #f85a59;
 
-  --nav-bar-color: #FFFFFF;
-
-/*categories colours*/
-  --animation:;
-  --brand-identity: ;
-  --dataviz: ;
-  --illustration: ;
-  --ui: ;
+  --nav-bar-color: #1b1c1b;
 
 }
 
@@ -51,11 +59,10 @@
 
 
 body {
-  font-family: itc-avant-garde-gothic-pro;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--background-primary-color);
+  background-color: var(--background-secondary-color);
   color: var(--text-color);
 	margin: auto; /*auto margins keep it centered */
   max-width: 100%;
@@ -66,30 +73,39 @@ body {
 
 /* ---------------- header & navigation bar ---------------- */
 
+div.logo {
+  text-align: center;
+  padding: 60px 0px 0px 0px;
+}
+
 header {
-  display: flex;
   align-items: baseline;
+  display: flex;
   justify-content: center;
+  padding: 24px 24px 24px 24px;
   position: sticky;
   top: 0px;
-  padding: 48px 24px 24px 24px;
 }
 
 nav a {
-  font-weight: 500;
-  font-size: 18px;
-  text-transform: lowercase;
-  text-decoration: none;
   color: var(--nav-bar-color);
-  opacity: 0.5;
-  margin: 0px 48px 0px 48px;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0px 12px 0px 12px;
+  opacity: 1;
   padding: 12px;
+  text-decoration: none;
+  text-transform: none;
   transition: opacity 0.5s;
 }
 
 nav a:hover, nav a.selected {
-  color: var(--nav-bar-color);
+  color: var(--accent-color);
   opacity: 1;
+}
+
+#nav-mobile {
+  display: none;
 }
 
 
@@ -102,7 +118,7 @@ nav a:hover, nav a.selected {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(119,9,250);
+  background-color: var(--background-secondary-color);
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -119,14 +135,14 @@ nav a:hover, nav a.selected {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #FFD43D;
+  color: var(--headline-secondary-color);
   opacity: 1;
   display: block;
   transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #ffffff;
+  color: var(--accent-color);
 }
 
 .overlay .closebtn {
@@ -134,42 +150,78 @@ nav a:hover, nav a.selected {
   top: 20px;
   right: 45px;
   font-size: 60px;
+  color: var(--accent-color);
 }
 
 
-/* ---------------- body ---------------- */
-
-
-
-
-
-/* ---------------- sections ---------------- */
-
+/* ---------------- grid ---------------- */
 
 section {
-  margin: 0px;
+  margin: 40px 0px 0px 0px;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(11, 1fr);
   gap: 32px 32px;
   grid-auto-flow: dense;
+  padding: 20px;
+
 }
 
-section.intro h1 {
-  grid-column: 3 / span 8;
+section.headline-main h1.main{
+  grid-column: 1 / span 11;
   text-align: center;
-  margin-top: 100px;
+  margin: 0px;
+
 }
 
-section.intro h2 {
-  grid-column: 5 / span 4;
+section.project div.artwork {
+  grid-column:  2 / span 3;
   text-align: center;
-  font-size: 18px;
 }
 
-div.social-icons {
-  padding: 12px;
+section.project div.description {
+  grid-column:  2 / span 3;
   text-align: center;
 }
+
+section.project div.artwork-two {
+  grid-column:  5 / span 3;
+  text-align: center;
+}
+
+section.project div.description-two {
+  grid-column:  5 / span 3;
+  text-align: center;
+}
+
+section.project div.artwork-three {
+  grid-column:  8 / span 3;
+  text-align: center;
+}
+
+section.project div.description-three {
+  grid-column:  8 / span 3;
+  text-align: center;
+}
+
+
+section.project img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+    opacity: 1;
+}
+
+section.project img:hover {
+    opacity: 0.85;
+
+}
+
+div.content {
+  text-align: center;
+}
+
+
 
 
 /* ---------------- portfolio ---------------- */
@@ -182,16 +234,17 @@ div.social-icons {
 
 /* ---------------- text ---------------- */
 
-h1, h2, h3, nav, .button {
-  font-family: itc-avant-garde-gothic-pro;
-  color: var(--headline-primary-color);
+h1, h2, h3, nav {
+  color: var(--text-color);
 }
 
-h1 {
-  font-size: 42px;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: -0.5px;
+h1, h2, h3, nav, p.cat {
+  font-family: DM Mono;
+  font-weight: 400;
+}
+
+h1.main {
+  font-size: 40px;
 }
 
 div.coming-soon {
@@ -203,9 +256,11 @@ div.coming-soon {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h3 {
@@ -215,13 +270,21 @@ h3 {
 }
 
 p {
-  font-family: 'Apercu Pro', sans-serif;
+  font-family: Avenir, sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.4;
   letter-spacing: 1.2px;
   margin-bottom: 10px;
+}
+
+p.cat {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin-top: 8px;
+  text-transform: uppercase;
 }
 
 a {
@@ -243,21 +306,20 @@ a.button {
 
 /* ---------------- images ---------------- */
 
-.logo-placeholder {
-  max-width: 2.5em;
-  max-height: inherit;
+img.logo-main {
+  max-width: 30px;
 }
 
-img.social {
-  max-width: 1.5em;
-  max-height: inherit;
-  margin: 0px 12px;
+img.logo-main:hover {
+  opacity: 0.8;
 }
 
 
 
 
 /* ---------------- portfolio grid ---------------- */
+
+
 
 
 
@@ -283,15 +345,33 @@ footer {
 
 /* ---------------- media queries ---------------- */
 
-@media (max-width: 920px) {
 
 
 
 @media screen and (max-width:800px) {
 
 header {
-  align-items: center;
+  justify-content: right;
   }
+
+  #nav-mobile {
+    display: block;
+  }
+
+  #nav-main {
+    display: none;
+  }
+
+  img.logo-main {
+    display:none;
+  }
+
+  span.burger {
+    display: block;
+    margin-right: 40px;
+    margin-top: -15px;
+  }
+
 
 }
 
@@ -303,18 +383,35 @@ header {
     text-align: center;
   }
 
+  section {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 64px 0 64px 0;
+      padding: 30px;
+    }
 
-#nav-main {
-  display: none;
+    section h1,
+    section.project div.artwork,
+    section.project div.description,
+    section.project div.artwork-two,
+    section.project div.description-two,
+    section.project div.artwork-three,
+    section.project div.description-three,
+
+    section.about div.photo,
+    section.about div.description,
+    section.contact div.form {
+      grid-column: 1 / span 4;
+    }
+
+
 }
 
-
-}
 
 
 @media screen and (max-height: 450px) {
 
 /*hamburger menu*/
+
   .overlay {
     overflow-y: auto;
   }
@@ -329,14 +426,18 @@ header {
     right: 35px;
   }
 
-#nav-main {
+  #nav-main {
   display: none;
-}
+  }
 
-span.burger {
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
+  img.logo-main {
+    display:none;
+  }
+
+  span.burger {
+    font-size: 40px;
+    margin-right: 40px;
+    margin-top: -15px;
+  }
 
 }
